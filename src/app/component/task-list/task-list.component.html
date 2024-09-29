@@ -1,0 +1,11 @@
+<app-card>
+  <div *ngFor="let task of childTasks">
+    <div class="container-task" (click)="markAsDone(task.id)">
+      <p [ngClass]="task.done ? 'done' : 'not-done'">
+        <!-- daca e true pune done, daca e false not done -->
+        {{ task.name }}
+      </p>
+      <button>Remove</button>
+    </div>
+  </div>
+</app-card>

@@ -1,0 +1,42 @@
+.container-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 475px;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.container-task:hover {
+  transform: scale(1.02);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a93226;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.not-done {
+  text-decoration: none;
+  color: black;
+}
