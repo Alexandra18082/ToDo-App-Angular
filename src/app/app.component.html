@@ -1,6 +1,0 @@
-<div class="container">
-  <h1>ToDo List</h1>
-  <app-add-task (taskAdded)="addTask($event)"></app-add-task>
-  <app-task-list [childTasks]="parentTask" (taskDone)="markTaskAsDone($event)">
-  </app-task-list>
-</div>

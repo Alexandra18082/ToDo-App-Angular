@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CardComponent } from '../../components/card/card.component';
-import { Todo } from '../../models.ts/todo';
+import { CardComponent } from '../card/card.component';
+import { Todo } from '../../models/todo';
 
 @Component({
   selector: 'app-task-list',
@@ -11,10 +11,15 @@ import { Todo } from '../../models.ts/todo';
   styleUrl: './task-list.component.css',
 })
 export class TaskListComponent {
-  @Input() childTasks: Todo[] = [];
+  @Input({required: true}) childTasks: Todo[] = [];
   @Output() taskDone = new EventEmitter<string>();
+  @Output() taskDeleted = new EventEmitter<string>();
 
   markAsDone(id: string) {
     this.taskDone.emit(id);
+  }
+
+  removeTask(id: string) {
+    this.taskDeleted.emit(id)
   }
 }

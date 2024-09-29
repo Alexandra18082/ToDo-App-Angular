@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CardComponent } from '../../components/card/card.component';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-add-task',

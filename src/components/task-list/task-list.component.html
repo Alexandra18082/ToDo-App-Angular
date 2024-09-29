@@ -5,7 +5,7 @@
         <!-- daca e true pune done, daca e false not done -->
         {{ task.name }}
       </p>
-      <button>Remove</button>
+      <button (click)="removeTask(task.id)">Remove</button>
     </div>
   </div>
 </app-card>

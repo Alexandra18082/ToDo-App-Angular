@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AddTaskComponent } from './component/add-task/add-task.component';
-import { TaskListComponent } from './component/task-list/task-list.component';
-import { Todo } from './models.ts/todo';
-import generateRandomId from './utils.ts/strings';
+import { AddTaskComponent } from '../add-task/add-task.component';
+import { TaskListComponent } from '../task-list/task-list.component';
+import { Todo } from '../../models/todo';
+import generateRandomId from '../../utils/strings';
 
 @Component({
   selector: 'app-root',
@@ -29,5 +29,9 @@ export class AppComponent {
       foundTask.done = !foundTask.done;
     }
     console.log(this.parentTask);
+  }
+
+  removeTask(id: string) {
+    this.parentTask = this.parentTask.filter(task => task.id !== id)
   }
 }
